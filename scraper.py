@@ -17,6 +17,8 @@ for name in names:
   print name.text
   print name.attrib['href']
   record['link'] = name.attrib['href']
+  print record 
+  scraperwiki.sqlite.save(unique_keys=['link'], data=record)
 #
 # # Write out to the sqlite database using scraperwiki library
 # scraperwiki.sqlite.save(unique_keys=['name'], data={"name": "susan", "occupation": "software developer"})
